@@ -5,6 +5,30 @@
  */
 public class OneOfEach {
 	public static void main (String[] args) {
-		//// Put your code here
-	}
-}
+	String children= "";
+	boolean gender= true;
+	boolean secGender= true;
+	int amount= 1;
+	if (Math.random() < 0.5) { // Aloop that get a randon gender 
+	   children= "g";
+	   }
+	else { gender= false;
+	       secGender= false;
+           children= "b";
+         }
+	   while (gender == secGender) {
+	   	amount++;
+	         if (Math.random() < 0.5) {
+	            children= children + " g";
+	            secGender= true;
+	         }
+	         else {
+	         	children=children + " b";
+	         	secGender=false;
+	         }
+	        }
+	        System.out.println(children );
+	        System.out.println("You made it... and you have " + amount + " children.");
+
+	   }
+    }
